@@ -1,0 +1,350 @@
+:root {
+    --primary-color: #1a1a2e;
+    --secondary-color: #16213e;
+    --accent-color: #e94560;
+    --background-color: #f6f6f6;
+    --font-color: #fff;
+    --secondary-font-color: #555;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    grid-template-columns: 100%;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--font-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+
+    padding: 0 20px;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+header h1 {
+    font-wight: 600px;
+    font-size: 25px;
+    color: var(--accent-color);
+    min-width: 190px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header li a {
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: 400px;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+header nav a:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+
+    padding: 20px 0;
+    padding-top: 40px;
+    box-shadow: var(--box-shadow);
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+footer nav li {
+    margin: 0 15px;
+}
+
+footer nav a {
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+footer nav a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Hero */
+
+.hero {
+    height: calc(100vh - 70px);
+    background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)), url('hero-background.png') no-repeat center/cover;
+    color: var(--font-color);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-weight: 600px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 600px;
+    margin-bottom: 30px;
+    font-weight: 300px;
+}
+
+.btn {
+    background-color: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* About Section */
+.about {
+    padding: 120px 0 60px 0;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 30px;
+    font-size: 25px;
+    color: var(--primary-color);
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* Portfolio */
+.portfolio {
+    padding: 60px 0;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+.portfolio h2 {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 35px;
+    color: var(--primary-color);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+    justify-content: center;
+    gap: 30px;
+}
+
+.portfolio-item {
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+/* Blog */
+.blog {
+    padding: 60px 0;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+}
+
+.blog h2 {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 25px;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.blog-roll {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.blog-post {
+    background-color: var(--primary-color);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.blog-post h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: var(--accent-color);
+}
+
+.blog-post p {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.read-more {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Contact */
+.contact {
+    padding: 100px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact h2 {
+    margin-bottom: 30px;
+    font-size: 25px;
+    color: var(--primary-color);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form label {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    font-size: 20px;
+    border-radius: var(--border-radius);
+}
+
+button[type="submit"] {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Resume */
+.resume {
+    padding: 100px 0;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+.resume h2 {
+    margin-bottom: 30px;
+    font-size: 25px;
+    color: var(--primary-color);
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.resume-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.resume-section ul {
+    list-style-type: none;
+}
